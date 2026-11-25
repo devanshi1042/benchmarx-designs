@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benchmarx Logistics Solutions — Homepage Design V2 (Clean White)</title>
+<meta name="description" content="Benchmarx Logistics Solutions — ODC freight forwarding design concept V2: clean, minimal, white.">
+<style>
+:root {
+  --ink: #111111;
+  --ink-soft: #444444;
+  --muted: #7a7a7a;
+  --accent: #0a5cff;
+  --accent-soft: #e8f0ff;
+  --line: #e5e5e5;
+  --bg: #ffffff;
+  --bg-soft: #f7f8fa;
+  --radius: 14px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== ANNOUNCEMENT ===== */
+.announce {
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  padding: 10px 16px;
+  letter-spacing: .3px;
+}
+.announce strong { color: #fff; }
+.announce a { color: var(--accent); font-weight: 600; text-decoration: none; margin-left: 8px; }
+
+/* ===== TOPBAR ===== */
+.topbar {
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted);
+  padding: 10px 0;
+  background: var(--bg);
+}
+.topbar .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.topbar a { color: var(--ink-soft); text-decoration: none; }
+.topbar a:hover { color: var(--accent); }
+.topbar-left, .topbar-right { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+
+/* ===== HEADER ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -.5px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.logo-mark {
+  width: 38px; height: 38px;
+  background: var(--ink);
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: -1px;
+}
+.logo small { display: block; font-size: 10px; font-weight: 500; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
+.logo-text { line-height: 1.1; }
+.nav { display: flex; gap: 28px; align-items: center; }
+.nav a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color .2s;
+}
+.nav a:hover { color: var(--accent); }
+.nav .cta {
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.nav .cta:hover { background: var(--accent); color: #fff; }
+
+/* ===== HERO ===== */
+.hero {
+  padding: 88px 0 72px;
+  background: var(--bg);
+}
+.hero .container {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 56px;
+  align-items: center;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+.eyebrow::before {
+  content: '';
+  width: 24px; height: 2px;
+  background: var(--accent);
+  display: inline-block;
+}
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+  color: var(--ink);
+}
+.hero h1 .accent { color: var(--accent); }
+.hero p.lead {
+  font-size: 18px;
+  color: var(--ink-soft);
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .15s, box-shadow .15s, background .2s;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: #0847cc; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(10,92,255,.25); }
+.btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.btn-ghost:hover { border-color: var(--ink); }
+.hero-trust { display: flex; gap: 24px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.hero-trust span { display: flex; align-items: center; gap: 8px; }
+.check {
+  width: 18px; height: 18px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700;
+}
+
+/* ===== QUOTE FORM ===== */
+.quote-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+.quote-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; letter-spacing: -.3px; }
+.quote-card p { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.quote-card form { display: grid; gap: 12px; }
+.quote-card label { font-size: 12px; font-weight: 600; color: var(--ink-soft); display: block; margin-bottom: 5px; }
+.quote-card input, .quote-card select, .quote-card textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  color: var(--ink);
+  font-family: inherit;
+}
+.quote-card input:focus, .quote-card select:focus, .quote-card textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.quote-card .submit {
+  margin-top: 6px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s;
+}
+.quote-card .submit:hover { background: #0847cc; }
+
+/* ===== STATS ===== */
+.stats {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 40px 0;
+  background: var(--bg);
+}
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.stat { text-align: center; }
+.stat .num { font-size: 40px; font-weight: 800; letter-spacing: -1px; color: var(--ink); }
+.stat .num .accent { color: var(--accent); }
+.stat .lbl { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+/* ===== SECTION HEADERS ===== */
+.section { padding: 88px 0; }
+.section-head { max-width: 640px; margin-bottom: 48px; }
+.section-head .eyebrow { color: var(--muted); }
+.section-head .eyebrow::before { background: var(--ink); }
+.section-head h2 { font-size: 38px; font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin-bottom: 14px; }
+.section-head p { font-size: 16px; color: var(--ink-soft); }
+
+/* ===== SERVICES ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.service-card {
+  background: #fff;
+  padding: 32px 28px;
+  transition: background .2s;
+}
+.service-card:hover { background: var(--bg-soft); }
+.service-num {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  display: block;
+}
+.service-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 10px; letter-spacing: -.2px; }
+.service-card p { font-size: 14px; color: var(--muted); }
+
+/* ===== ODC SPLIT ===== */
+.odc {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.odc .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.odc-visual {
+  background: var(--ink);
+  border-radius: var(--radius);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.odc-visual .big { font-size: 72px; font-weight: 800; letter-spacing: -3px; opacity: .1; position: absolute; bottom: 20px; right: 24px; }
+.odc-visual .inner { text-align: center; padding: 0 32px; }
+.odc-visual .inner .tag { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600; }
+.odc-visual .inner h3 { font-size: 28px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 10px; }
+.odc-visual .inner p { font-size: 14px; opacity: .7; }
+.odc-content .eyebrow { color: var(--accent); }
+.odc-content .eyebrow::before { background: var(--accent); }
+.odc-content h2 { font-size: 36px; font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin-bottom: 18px; }
+.odc-content > p { color: var(--ink-soft); font-size: 16px; margin-bottom: 24px; }
+.odc-list { list-style: none; display: grid; gap: 14px; margin-bottom: 28px; }
+.odc-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: var(--ink-soft); }
+.odc-list .check { flex-shrink: 0; margin-top: 3px; }
+
+/* ===== WHY ===== */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.why-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.why-card:hover { border-color: var(--ink); box-shadow: 0 8px 30px rgba(0,0,0,.05); }
+.why-card .icon {
+  width: 48px; height: 48px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.why-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 10px; letter-spacing: -.2px; }
+.why-card p { font-size: 14px; color: var(--muted); }
+
+/* ===== PROCESS ===== */
+.process { background: var(--bg); }
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.step {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  position: relative;
+}
+.step .n {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--accent-soft);
+  -webkit-text-stroke: 1px var(--accent);
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+.step h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.step p { font-size: 13px; color: var(--muted); }
+
+/* ===== TESTIMONIALS ===== */
+.testimonials { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.testi {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+.testi .stars { color: var(--accent); font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; }
+.testi p { font-size: 15px; color: var(--ink-soft); margin-bottom: 18px; }
+.testi .who { display: flex; align-items: center; gap: 12px; }
+.testi .avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+.testi .who .name { font-weight: 700; font-size: 14px; }
+.testi .who .role { font-size: 12px; color: var(--muted); }
+
+/* ===== FAQ ===== */
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  font-family: inherit;
+}
+.faq-item button .plus {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  transition: transform .3s, background .2s;
+  flex-shrink: 0;
+}
+.faq-item.open button .plus { transform: rotate(45deg); background: var(--accent); color: #fff; border-color: var(--accent); }
+.faq-item .body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+  padding: 0 44px;
+}
+.faq-item.open .body { max-height: 300px; padding-bottom: 22px; }
+.faq-item .body p { font-size: 15px; color: var(--ink-soft); }
+
+/* ===== CTA ===== */
+.cta-band {
+  background: var(--ink);
+  color: #fff;
+  padding: 72px 0;
+  text-align: center;
+}
+.cta-band h2 { font-size: 36px; font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; }
+.cta-band p { opacity: .7; margin-bottom: 28px; font-size: 16px; }
+.cta-band .btn-primary { background: var(--accent); }
+.cta-band .btn-ghost { color: #fff; border-color: rgba(255,255,255,.25); }
+.cta-band .btn-ghost:hover { border-color: #fff; }
+
+/* ===== FOOTER ===== */
+.footer { background: var(--ink); color: rgba(255,255,255,.6); padding: 56px 0 32px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer .logo { color: #fff; }
+.footer .logo-mark { background: #fff; color: var(--ink); }
+.footer .logo small { color: rgba(255,255,255,.5); }
+.footer h4 { color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+.footer ul { list-style: none; display: grid; gap: 10px; }
+.footer ul a { color: rgba(255,255,255,.6); text-decoration: none; font-size: 14px; }
+.footer ul a:hover { color: #fff; }
+.footer-about { font-size: 14px; margin-top: 16px; max-width: 280px; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+}
+
+/* ===== FLOATING WHATSAPP ===== */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px; height: 56px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(37,211,102,.4);
+  z-index: 200;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .hero .container { grid-template-columns: 1fr; gap: 40px; }
+  .hero h1 { font-size: 40px; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .odc .container { grid-template-columns: 1fr; gap: 40px; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .stats .container { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav { display: none; }
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: 32px; }
+  .section-head h2, .odc-content h2, .cta-band h2 { font-size: 28px; }
+  .services-grid, .process-grid { grid-template-columns: 1fr; }
+  .stats .container { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Announcement -->
+<div class="announce">
+  <strong>Free freight quote within 24 hours</strong> — tell us your cargo, we'll send a tailored plan.
+  <a href="#quote">Get a quote →</a>
+</div>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span>📍 Pune, India &nbsp;·&nbsp; <a href="mailto:info@benchmarxlogistics.com">info@benchmarxlogistics.com</a></span>
+    </div>
+    <div class="topbar-right">
+      <a href="tel:+919876543210">+91 98765 43210</a>
+      <a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a href="#quote" style="font-weight:600;color:var(--accent)">Get a Free Quote</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <a href="#" class="logo">
+      <div class="logo-mark">BL</div>
+      <div class="logo-text">Benchmarx<small>Logistics Solutions</small></div>
+    </a>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#odc">ODC Expertise</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">How We Work</a>
+      <a href="#faq">FAQ</a>
+      <a href="#quote" class="cta">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="quote">
+  <div class="container">
+    <div>
+      <span class="eyebrow">ODC &amp; Multi-Modal Freight Forwarding</span>
+      <h1>We move the cargo <br>that <span class="accent">defies convention.</span></h1>
+      <p class="lead">Specialists in Over Dimensional Cargo — road, ocean &amp; air — with end-to-end customs clearance and warehousing. One partner from factory gate to final delivery.</p>
+      <div class="hero-ctas">
+        <a href="#quote" class="btn btn-primary">Get a Free Quote →</a>
+        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+      <div class="hero-trust">
+        <span><i class="check">✓</i> 48+ countries served</span>
+        <span><i class="check">✓</i> 100% customs compliance</span>
+        <span><i class="check">✓</i> 24/7 cargo tracking</span>
+      </div>
+    </div>
+    <div class="quote-card">
+      <h3>Request a tailored quote</h3>
+      <p>Response within 24 hours. No commitment.</p>
+      <form onsubmit="event.preventDefault(); alert('Thank you! Our team will reach out within 24 hours.'); this.reset();">
+        <div>
+          <label>Full name</label>
+          <input type="text" placeholder="Your name" required>
+        </div>
+        <div>
+          <label>Business email</label>
+          <input type="email" placeholder="you@company.com" required>
+        </div>
+        <div>
+          <label>Phone / WhatsApp</label>
+          <input type="tel" placeholder="+91 …" required>
+        </div>
+        <div>
+          <label>Cargo type</label>
+          <select required>
+            <option value="">Select…</option>
+            <option>ODC / Over Dimensional</option>
+            <option>Standard FCL / LCL</option>
+            <option>Air freight</option>
+            <option>Warehousing</option>
+            <option>Customs clearance</option>
+          </select>
+        </div>
+        <div>
+          <label>Tell us about the shipment</label>
+          <textarea rows="2" placeholder="Origin, destination, dimensions, weight…"></textarea>
+        </div>
+        <button class="submit" type="submit">Request Quote →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="container">
+    <div class="stat"><div class="num">48<span class="accent">+</span></div><div class="lbl">Countries</div></div>
+    <div class="stat"><div class="num">1,200<span class="accent">+</span></div><div class="lbl">Shipments / yr</div></div>
+    <div class="stat"><div class="num">100<span class="accent">%</span></div><div class="lbl">Compliance</div></div>
+    <div class="stat"><div class="num">24<span class="accent">/7</span></div><div class="lbl">Cargo tracking</div></div>
+  </div>
+</div>
+
+<!-- Services -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What We Do</span>
+      <h2>Every modality. One accountable partner.</h2>
+      <p>From the first kilometer to the last, we plan, execute, and document — so you don't have to chase three different vendors.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-num">01</span>
+        <h3>ODC Freight</h3>
+        <p>Route surveys, permits, low-bed trailers, and escort coordination for cargo that doesn't fit a standard box.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">02</span>
+        <h3>Ocean Freight</h3>
+        <p>FCL and LCL on major trade lanes, with slot visibility and port-to-port doorstep options.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">03</span>
+        <h3>Air Freight</h3>
+        <p>Urgent, high-value, or temperature-sensitive shipments on charter and scheduled freighter capacity.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">04</span>
+        <h3>Road &amp; Multimodal</h3>
+        <p>Truck-to-port, truck-to-rail, and door-to-door multimodal chains across India, SEA, and the Gulf.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">05</span>
+        <h3>Warehousing</h3>
+        <p>Bonded and general-purpose storage, cross-dock, and value-added services like kitting and labeling.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">06</span>
+        <h3>Customs Clearance</h3>
+        <p>Licensing, HS classification, duty optimization, and single-window filing — zero surprise detentions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ODC Split -->
+<section class="section odc" id="odc">
+  <div class="container">
+    <div class="odc-visual">
+      <span class="big">ODC</span>
+      <div class="inner">
+        <span class="tag">Our Specialty</span>
+        <h3>Over Dimensional. Under Control.</h3>
+        <p>Bridge cranes, wind turbine blades, transformer cores — we've moved them all.</p>
+      </div>
+    </div>
+    <div class="odc-content">
+      <span class="eyebrow">ODC Expertise</span>
+      <h2>When the cargo is bigger than the road, we draw a new map.</h2>
+      <p>Every ODC project starts with a route survey — every bridge, underpass, and turn radius catalogued before a single wheel moves. We handle permits, escorts, and last-mile execution so your project timeline survives contact with reality.</p>
+      <ul class="odc-list">
+        <li><i class="check">✓</i> Pre-move route surveys &amp; engineering sign-off</li>
+        <li><i class="check">✓</i> Permit management with 40+ state authorities</li>
+        <li><i class="check">✓</i> Low-bed, SPMT, and modular trailer fleet access</li>
+        <li><i class="check">✓</i> 24/7 GPS + escort coordination during transit</li>
+      </ul>
+      <a href="#quote" class="btn btn-primary">Plan an ODC Move →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Why -->
+<section class="section" id="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why Benchmarx</span>
+      <h2>Built for projects that can't afford a reroute.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="icon">◎</div>
+        <h3>ODC-first, not ODC-later</h3>
+        <p>We were founded for oversized cargo. The permits, escorts, and route intelligence aren't an add-on — they're the core of how we operate.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">≡</div>
+        <h3>Single point of accountability</h3>
+        <p>One contract, one project manager, one invoice. No more juggling trucker, ocean line, customs broker, and insurer.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">⚡</div>
+        <h3>Response in hours, not days</h3>
+        <p>Live GPS on every active shipment, and a project manager who picks up the phone — 24/7, including transit weekends.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">✓</div>
+        <h3>Zero-demotion record</h3>
+        <p>Full cargo insurance, documented chain-of-custody, and a claims desk that responds within 48 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How It Works</span>
+      <h2>Four steps. No black box.</h2>
+    </div>
+    <div class="process-grid">
+      <div class="step"><div class="n">1</div><h4>Scope &amp; Survey</h4><p>We catalogue your cargo, run a route survey, and lock the plan — usually within 72 hours.</p></div>
+      <div class="step"><div class="n">2</div><h4>Permits &amp; Docs</h4><p>Every authority, license, and letter of credit handled in one parallel workflow.</p></div>
+      <div class="step"><div class="n">3</div><h4>Execute &amp; Track</h4><p>Cargo moves with live GPS, escort coordination, and daily status briefings.</p></div>
+      <div class="step"><div class="n">4</div><h4>Deliver &amp; Close</h4><p>POD, demurrage audit, and final documentation within 48 hours of delivery.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section testimonials">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Client Outcomes</span>
+      <h2>Trusted by project teams who can't slip.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>"They moved a 42-tonne transformer across three states in 11 days. Our previous forwarder couldn't even get the permits in 14."</p>
+        <div class="who">
+          <div class="avatar">RS</div>
+          <div><div class="name">R. Shukla</div><div class="role">Project Director, Power Infrastructure</div></div>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>"One invoice, one manager, one source of truth. That alone saved us two weeks of coordination overhead on our last three moves."</p>
+        <div class="who">
+          <div class="avatar">AK</div>
+          <div><div class="name">A. Kumar</div><div class="role">Head of Logistics, Renewable Energy</div></div>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>"The route survey caught two underpasses our own team had missed. That's why we'll keep using them for every ODC project."</p>
+        <div class="who">
+          <div class="avatar">PM</div>
+          <div><div class="name">P. Mehta</div><div class="role">Operations Lead, Heavy Machinery</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="eyebrow" style="justify-content:center">Frequently Asked</span>
+      <h2>Before you ask.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button onclick="this.parentElement.classList.toggle('open')">What defines ODC cargo?<span class="plus">+</span></button>
+        <div class="body"><p>Over Dimensional Cargo — anything that exceeds standard road, rail, or container limits in length, width, or height. Typical examples: wind turbine blades, bridge segments, industrial compressors, and heavy plant equipment.</p></div>
+      </div>
+      <div class="faq-item">
+        <button onclick="this.parentElement.classList.toggle('open')">How early should we plan an ODC move?<span class="plus">+</span></button>
+        <div class="body"><p>8–12 weeks lead time is ideal. Route surveys, state permits, and bridge load certifications all run in parallel but depend on each other — compressing that window adds risk and cost.</p></div>
+      </div>
+      <div class="faq-item">
+        <button onclick="this.parentElement.classList.toggle('open')">Do you handle customs clearance in-house?<span class="plus">+</span></button>
+        <div class="body"><p>Yes. Our clearance team covers import/export filings, HS classification, duty optimization, and single-window documentation for all lanes we operate on.</p></div>
+      </div>
+      <div class="faq-item">
+        <button onclick="this.parentElement.classList.toggle('open')">Which countries do you operate in?<span class="plus">+</span></button>
+        <div class="body"><p>48+ countries across India, Southeast Asia, the Middle East, and East Africa, with primary hubs in Pune, Mumbai, Chennai, and Dubai.</p></div>
+      </div>
+      <div class="faq-item">
+        <button onclick="this.parentElement.classList.toggle('open')">What happens if a shipment is damaged in transit?<span class="plus">+</span></button>
+        <div class="body"><p>Every move carries full cargo insurance. Our claims desk opens within 4 hours of notification and resolves standard claims in under 10 business days.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Band -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to move the impossible?</h2>
+    <p>Tell us about your cargo. We'll come back within 24 hours with a route, a plan, and a price.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+      <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="btn btn-ghost">Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="logo">
+          <div class="logo-mark">BL</div>
+          <div class="logo-text" style="color:#fff">Benchmarx<small style="color:rgba(255,255,255,.5)">Logistics Solutions</small></div>
+        </a>
+        <p class="footer-about">ODC &amp; multi-modal freight forwarding. Built for projects where the cargo is the whole story.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">ODC Freight</a></li>
+          <li><a href="#services">Ocean &amp; Air</a></li>
+          <li><a href="#services">Warehousing</a></li>
+          <li><a href="#services">Customs Clearance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#process">How We Work</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#quote">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="mailto:info@benchmarxlogistics.com">info@benchmarxlogistics.com</a></li>
+          <li><a href="https://wa.me/919876543210">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Benchmarx Logistics Solutions Pvt. Ltd.</span>
+      <span>Pune · Mumbai · Chennai · Dubai</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+</body>
+</html>

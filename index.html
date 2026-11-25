@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benchmarx Logistics — Homepage Design Concepts</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #0a0e14;
+  color: #eef2f8;
+  min-height: 100vh;
+  padding: 60px 24px;
+}
+.wrap { max-width: 1000px; margin: 0 auto; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: #c9a227;
+  margin-bottom: 16px;
+}
+.eyebrow::before { content: ''; width: 28px; height: 1px; background: #c9a227; display: inline-block; }
+h1 {
+  font-size: 40px; font-weight: 800; letter-spacing: -1px;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #e6c65c, #fff);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  margin-bottom: 12px;
+}
+.sub { color: #9aa5b5; font-size: 16px; margin-bottom: 48px; max-width: 560px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card {
+  display: block;
+  background: #0f141d;
+  border: 1px solid #1e2533;
+  border-radius: 14px;
+  padding: 32px 28px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s, transform .2s;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.card.v1::before { background: linear-gradient(90deg, #0a2540, #ff6b35); }
+.card.v2::before { background: linear-gradient(90deg, #111, #0a5cff); }
+.card.v3::before { background: linear-gradient(90deg, #0a0e14, #c9a227); }
+.card:hover { border-color: rgba(201,162,39,.4); transform: translateY(-4px); }
+.card .tag {
+  display: inline-block;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: #c9a227;
+  background: rgba(201,162,39,.1);
+  border: 1px solid rgba(201,162,39,.25);
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin-bottom: 18px;
+}
+.card h2 { font-size: 22px; font-weight: 800; letter-spacing: -.3px; margin-bottom: 10px; }
+.card p { font-size: 14px; color: #9aa5b5; line-height: 1.6; margin-bottom: 24px; }
+.card .open {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px; font-weight: 700;
+  color: #e6c65c;
+}
+.card .open .arrow { transition: transform .2s; }
+.card:hover .open .arrow { transform: translateX(4px); }
+
+/* swatch strips */
+.swatches { display: flex; gap: 6px; margin-bottom: 20px; }
+.swatch {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.1);
+}
+.swatch.navy { background: #0a2540; }
+.swatch.orange { background: #ff6b35; }
+.swatch.gold { background: #d4a853; }
+.swatch.ink { background: #111; }
+.swatch.blue { background: #0a5cff; }
+.swatch.white { background: #fff; }
+.swatch.dark { background: #0a0e14; }
+.swatch.gold2 { background: #c9a227; }
+
+.note {
+  margin-top: 48px;
+  padding: 20px 24px;
+  background: #0f141d;
+  border: 1px solid #1e2533;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #9aa5b5;
+  line-height: 1.7;
+}
+.note strong { color: #eef2f8; }
+@media (max-width: 800px) {
+  .cards { grid-template-columns: 1fr; }
+  h1 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">Design Review</span>
+  <h1>Benchmarx Logistics — Homepage Concepts</h1>
+  <p class="sub">Three homepage design directions for the new Benchmarx Logistics Solutions website. Open each to review the full layout, then pick a direction (or blend ideas across versions) for the final build.</p>
+
+  <div class="cards">
+    <a class="card v1" href="design-1-navy.html" target="_blank">
+      <span class="tag">Version 1</span>
+      <div class="swatches">
+        <div class="swatch navy"></div>
+        <div class="swatch orange"></div>
+        <div class="swatch gold"></div>
+      </div>
+      <h2>Navy &amp; Orange</h2>
+      <p>Classic corporate freight-forwarder look. Deep navy trust, orange energy, full lead-capture hero with quote form. The safe, professional choice.</p>
+      <span class="open">Open version <span class="arrow">→</span></span>
+    </a>
+
+    <a class="card v2" href="design-2-white.html" target="_blank">
+      <span class="tag">Version 2</span>
+      <div class="swatches">
+        <div class="swatch ink"></div>
+        <div class="swatch blue"></div>
+        <div class="swatch white"></div>
+      </div>
+      <h2>Clean &amp; Minimal</h2>
+      <p>White, editorial, number-driven. Feels like a modern consulting / logistics SaaS site. Calm, precise, and easy to read for long decision-makers.</p>
+      <span class="open">Open version <span class="arrow">→</span></span>
+    </a>
+
+    <a class="card v3" href="design-3-dark.html" target="_blank">
+      <span class="tag">Version 3</span>
+      <div class="swatches">
+        <div class="swatch dark"></div>
+        <div class="swatch gold2"></div>
+        <div class="swatch white"></div>
+      </div>
+      <h2>Dark &amp; Premium</h2>
+      <p>High-end, dramatic dark palette with gold accents. Positions Benchmarx as the heavyweight, premium ODC specialist. Maximum visual impact.</p>
+      <span class="open">Open version <span class="arrow">→</span></span>
+    </a>
+  </div>
+
+  <div class="note">
+    <strong>How to review:</strong> Open each version in a new tab (or full-screen on a desktop). Scroll through the whole page — hero, services, ODC section, why us, process, testimonials, FAQ, and footer. Pick the direction that best fits Benchmarx's brand, or tell us which sections from which versions you'd like to combine.
+  </div>
+</div>
+</body>
+</html>
